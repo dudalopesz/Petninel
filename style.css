@@ -1,0 +1,234 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf5;
+    color: #40352f;
+}
+
+/* CABEÇALHO */
+
+.topo {
+    background-color: #ffffff;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e58a58;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #40352f;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e58a58;
+}
+
+.btn-login {
+    background-color: #e58a58;
+    color: white !important;
+    padding: 12px 22px;
+    border-radius: 25px;
+}
+
+/* BANNER PRINCIPAL */
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 10%;
+    gap: 40px;
+    background-color: #ffeadb;
+    min-height: 430px;
+}
+
+.banner-texto {
+    max-width: 550px;
+}
+
+.banner-texto h1 {
+    font-size: 43px;
+    color: #a95e37;
+    margin-bottom: 20px;
+}
+
+.banner-texto p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.banner-imagem img {
+    width: 380px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* BOTÕES */
+
+.botao {
+    display: inline-block;
+    background-color: #e58a58;
+    color: white;
+    padding: 15px 28px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #c76e40;
+    transform: translateY(-3px);
+}
+
+/* SOBRE */
+
+.sobre {
+    text-align: center;
+    padding: 65px 10%;
+}
+
+.sobre h2,
+.servicos h2 {
+    color: #a95e37;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* SERVIÇOS */
+
+.servicos {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: #fff2e9;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card span {
+    font-size: 38px;
+}
+
+.card h3 {
+    color: #a95e37;
+    margin: 15px 0;
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+/* CHAMADA FINAL */
+
+.chamada {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.chamada h2 {
+    color: #a95e37;
+    margin-bottom: 15px;
+}
+
+.chamada p {
+    margin-bottom: 25px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #a95e37;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    line-height: 1.8;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 850px) {
+
+    .topo {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-texto h1 {
+        font-size: 32px;
+    }
+
+    .banner-imagem img {
+        max-width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
